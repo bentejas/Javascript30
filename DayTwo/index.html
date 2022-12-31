@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.cdnfonts.com/css/alarm-clock" rel="stylesheet">
+    </head>
+    <body>
+        <div class="clock">
+            <div class="clockface">
+                <div class="center">
+
+                </div>
+                <div class="hand" id="hour">
+
+                </div>
+                <div class="hand" id="minute">
+
+                </div>
+                <div class="hand" id="second">
+
+                </div>
+                <div class="ampmIndicator">
+                    <p id="am-pm"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        function setDate(){
+            const now = new Date();
+            const currentSecond = now.getSeconds();
+            const currentMinute = now.getMinutes();
+            const currentHour = now.getHours();
+            const ampm = currentHour >= 12 ? 'pm' : 'am';
+            const secondDegree = currentSecond  / 60 * 360 + 90;
+            const minuteDegree = currentMinute / 60 * 360 + 90;
+            const hourDegree = currentHour / 12 * 360 + 90;
+            document.getElementById("second").style.transform = `rotate(${secondDegree}deg)`;
+            document.getElementById("minute").style.transform = `rotate(${minuteDegree}deg)`;
+            document.getElementById("hour").style.transform = `rotate(${hourDegree}deg)`;
+            document.getElementById("am-pm").innerHTML = ampm;
+        }
+
+        setInterval(setDate, 1000);
+    </script>
+</html>

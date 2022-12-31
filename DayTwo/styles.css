@@ -1,0 +1,83 @@
+body{
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 175px;
+}
+
+.clockface{
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 10px solid white;
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+}
+
+.ampmIndicator{
+    position: absolute;
+    top: 70%;
+    left: 60%;
+    color: white;
+    font-family: 'alarm clock', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.center{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 48%;
+    left: 46.8%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.hand{
+    width: 45%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    border-radius: 5px;
+    transform-origin: 102%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+#hour{
+}
+
+#minute{
+    
+}
+
+#second{
+
+}
+
+.am-pm{
+
+}
