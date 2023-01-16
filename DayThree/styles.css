@@ -1,0 +1,38 @@
+body{
+    background: #202A44;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+:root{
+    --bcolor: #FFA500;
+    --space: 10px;
+    --blur: 10px;
+}
+
+#pageHeader{
+    color: white;
+}
+
+#JSHighlight{
+    color: #FFA500;
+}
+
+.topContent{
+    text-align: center;
+}
+
+#frontImg{
+    max-width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding: var(--spacing);
+    background: var(--bcolor);
+    filter: blur(var(--blur));
+}
+
+.middleContent{
+    font-size: 1.6rem;
+    text-align: center;
+}
+

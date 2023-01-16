@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="topContent">
+            <h1 id="pageHeader">Update CSS Variables with <span id="JSHighlight">JS</span></h1>
+        </div>
+        
+        <div class="middleContent">
+            <label for="spacing">Spacing:</label>
+            <input type="range" id="spacing" name="spacing" value="10" min="10" max="200" data-sizing="px">
+            <br><label for="blur">Blur:</label>
+            <input type="range" id="blur" name="blur" value="10" min="0" max="25" data-sizing="px">
+            <br><label for="bcolor">Base Color:</label>
+            <input type="color" id="bcolor" name="bcolor" value="#FFA500">
+        </div>
+
+        <img id="frontImg" src="https://www.worldatlas.com/r/w1200/upload/70/32/73/shutterstock-310887800.jpg">
+        
+        <script>
+            const inputs = document.querySelectorAll('.middleContent input');
+            
+            function handleUpdate() {
+                const suffix = this.dataset.sizing || '';
+                document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+            }
+
+            inputs.forEach(input => input.addEventListener('change', handleUpdate));
+            inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+        </script>
+    </body>
+</html>
